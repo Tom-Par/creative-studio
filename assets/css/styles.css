@@ -3,11 +3,10 @@ body {
 }
 
 nav ul {
+    display: flex;
     list-style: none;
-}
-
-li {
-    display:inline-block
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -15,4 +14,10 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+@media (max-width:700px) {
+    nav {
+        flex-direction: column;
+    }
 }
