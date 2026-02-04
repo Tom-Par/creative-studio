@@ -1,5 +1,21 @@
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  ==================== 
+    Header Navigation Bar
+    ====================  */
+    
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 3px black solid;
+    padding: 2%;
+    justify-content: right;
 }
 
 nav ul {
@@ -10,12 +26,49 @@ nav ul {
     gap:20px;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/*  ==================== 
+            Main
+    ====================  */
+
+main {
+    flex:1;
 }
+
+.hero {
+    padding: 10%;
+    max-width: 90%;
+}
+
+.services {
+    padding: 10%;
+    border: 2px black solid;
+    max-width: 95%;
+}
+
+.services h2 {
+    text-align: center;
+}
+
+.services .container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+/*  ==================== 
+            Footer
+    ====================  */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border: 3px black dotted;
+    flex: bottom;
+}
+
+/*  ==================== 
+    Responsiveness querry
+    ====================  */
 
 @media (max-width: 700px) {
     nav {
@@ -24,5 +77,9 @@ nav {
 
     nav ul {
         flex-direction: column;
+    }
+
+    .services .container {
+        grid-template-columns: auto;
     }
 }
