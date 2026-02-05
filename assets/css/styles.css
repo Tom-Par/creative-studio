@@ -15,7 +15,7 @@ nav {
     flex-wrap: wrap;
     border: 3px black solid;
     padding: 2%;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 nav ul {
@@ -51,7 +51,7 @@ main {
 
 .services .container{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
 }
 
@@ -63,7 +63,6 @@ footer {
     padding: 20px;
     text-align: center;
     border: 3px black dotted;
-    flex: bottom;
 }
 
 /*  ==================== 
