@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FFFDF1;
 }
 
 /*  ==================== 
@@ -37,12 +38,14 @@ main {
 .hero {
     padding: 10%;
     max-width: 90%;
+    /* background-color: #FF9644; */
 }
 
 .services {
     padding: 10%;
-    border: 2px black solid;
-    max-width: 95%;
+    border: 3px black solid;
+    /* border-radius: 15%; */
+    max-width: 90%;
 }
 
 .services h2 {
@@ -53,7 +56,24 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
+    gap:15px
 }
+
+/*  ==================== 
+        Card Component
+    ====================  */
+
+    .service-card {
+        padding: 10px;
+        border-radius: 20%;
+        background-color: #FFCE99;
+        box-shadow: 0;
+        transition: box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+        box-shadow: 0 0 10px #242121;
+    }
 
 /*  ==================== 
             Footer
@@ -62,7 +82,7 @@ main {
 footer {
     padding: 20px;
     text-align: center;
-    border: 3px black dotted;
+    border: 3px black solid;
 }
 
 /*  ==================== 
