@@ -27,11 +27,18 @@ nav ul {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-weight: 600;
-    font-size: larger;
     text-decoration: none;
     color: inherit;
 }
+
+.logo i {
+    font-size: 1.2rem;
+}
+
 
 
 /*  ==================== 
