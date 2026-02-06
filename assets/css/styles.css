@@ -14,7 +14,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 3px black solid;
+    border-bottom: 2px rgb(209, 187, 175) solid;
     padding: 2%;
     justify-content: flex-end;
 }
@@ -36,16 +36,20 @@ main {
 }
 
 .hero {
-    padding: 10%;
-    max-width: 90%;
+    margin:auto;
+    padding: 100px;
+    max-width: 1250px;
     /* background-color: #FF9644; */
 }
 
 .services {
-    padding: 10%;
-    border: 3px black solid;
-    /* border-radius: 15%; */
-    max-width: 90%;
+    margin:auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border: 3px rgb(209, 187, 175) solid;
+    border-radius: 1rem;
+    max-width: 1250px;
 }
 
 .services h2 {
@@ -65,14 +69,15 @@ main {
 
     .service-card {
         padding: 10px;
-        border-radius: 20%;
+        border-radius: 2rem;
         background-color: #FFCE99;
         box-shadow: 0;
-        transition: box-shadow 0.3s;
+        transition: box-shadow transform 0.5s;
     }
 
     .service-card:hover {
         box-shadow: 0 0 10px #242121;
+        transform: translateY(-1.5px)
     }
 
 /*  ==================== 
@@ -80,9 +85,10 @@ main {
     ====================  */
 
 footer {
+    margin-top: 5px;
     padding: 20px;
     text-align: center;
-    border: 3px black solid;
+    border-top: 2px rgb(209, 187, 175) solid;
 }
 
 /*  ==================== 
@@ -92,6 +98,7 @@ footer {
 @media (max-width: 700px) {
     nav {
         flex-direction: column;
+        justify-content: flex-end;
     }
 
     nav ul {
