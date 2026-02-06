@@ -12,11 +12,10 @@ body {
     
 nav {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 2px rgb(209, 187, 175) solid;
     padding: 2%;
-    justify-content: flex-end;
 }
 
 nav ul {
@@ -27,18 +26,28 @@ nav ul {
     gap:20px;
 }
 
+.logo {
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+    color: inherit;
+}
+
+
 /*  ==================== 
             Main
     ====================  */
 
 main {
     flex:1;
+    margin: auto;
+    max-width: 1250px;
 }
 
 .hero {
     margin:auto;
     padding: 100px;
-    max-width: 1250px;
+    /* max-width: 1250px; */
     /* background-color: #FF9644; */
 }
 
@@ -49,7 +58,7 @@ main {
     padding: 30px;
     border: 3px rgb(209, 187, 175) solid;
     border-radius: 1rem;
-    max-width: 1250px;
+    /* max-width: 1250px; */
 }
 
 .services h2 {
@@ -67,18 +76,158 @@ main {
         Card Component
     ====================  */
 
-    .service-card {
-        padding: 10px;
-        border-radius: 2rem;
-        background-color: #FFCE99;
-        box-shadow: 0;
-        transition: box-shadow transform 0.5s;
-    }
+.service-card {
+    padding: 10px;
+    border-radius: 2rem;
+    background-color: #FFCE99;
+    box-shadow: 0;
+    transition: box-shadow transform 0.5s;
+}
+.service-card:hover {
+    box-shadow: 0 0 10px #242121;
+    transform: translateY(-1.5px)
+}
 
-    .service-card:hover {
-        box-shadow: 0 0 10px #242121;
-        transform: translateY(-1.5px)
-    }
+/*  ==================== 
+    Shared Page Sections
+====================  */
+
+.page-hero {
+    padding: 60px 30px 10px;
+}
+
+.page-hero h1 {
+    margin-top: 0;
+}
+
+.page-hero p {
+    max-width: 70ch;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 1rem;
+    border: 2px rgb(209, 187, 175) solid;
+    background-color: #FFCE99;
+    color: #242121;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px #242121;
+    transform: translateY(-1px);
+}
+
+/*  ==================== 
+            About Page
+    ====================  */
+
+.about-grid {
+    padding: 20px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.about-card {
+    padding: 20px;
+    border: 3px rgb(209, 187, 175) solid;
+    border-radius: 1rem;
+    background-color: #FFFDF1;
+}
+
+.process {
+    padding: 10px 30px 40px;
+}
+
+.process-list {
+    padding-left: 22px; /* keeps <ol> readable */
+    margin: 0;
+}
+
+.process-list li {
+    margin: 14px 0;
+}
+
+.process-list h3 {
+    margin: 0 0 6px;
+}
+
+/*  ==================== 
+           Contact Page
+    ====================  */
+
+.contact-grid {
+    padding: 20px 30px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 15px;
+}
+
+.contact-card {
+    padding: 20px;
+    border: 3px rgb(209, 187, 175) solid;
+    border-radius: 1rem;
+    background-color: #FFFDF1;
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+}
+
+.contact-form {
+    padding: 20px;
+    border: 3px rgb(209, 187, 175) solid;
+    border-radius: 1rem;
+    background-color: #FFFDF1;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 1rem;
+    border: 2px rgb(209, 187, 175) solid;
+    background-color: #FFFDF1;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #242121;
+    outline-offset: 2px;
+}
+
+.contact-form button.btn {
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.form-note {
+    margin-top: 10px;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
 
 /*  ==================== 
             Footer
@@ -107,5 +256,23 @@ footer {
 
     .services .container {
         grid-template-columns: auto;
+    }
+
+    .page-hero {
+        padding: 40px 20px 10px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .process {
+        padding: 10px 20px 30px;
     }
 }
